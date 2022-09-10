@@ -13,3 +13,7 @@ This is briefly covered in the [Rust Book](https://doc.rust-lang.org/book/ch04-0
 ### The gist
 
 It's better to use a reference to the static version because the borrowed heap types can be implicitly converted to the static versions.
+
+## [Constructors](https://rust-unofficial.github.io/patterns/idioms/ctor.html)
+
+Add a `impl Default for X` and a `fn new() -> X` always. Even if they are duplicated or new is empty. Default is useful for `*or_default` functions!

@@ -16,4 +16,8 @@ It's better to use a reference to the static version because the borrowed heap t
 
 ## [Constructors](https://rust-unofficial.github.io/patterns/idioms/ctor.html)
 
-Add a `impl Default for X` and a `fn new() -> X` always. Even if they are duplicated or new is empty. Default is useful for `*or_default` functions!
+Add a `impl Default for X` and a `fn new() -> X` always. Even if they are duplicated or new is empty. People just expected `new` to be there. Default is useful for `*or_default` functions!
+
+## Finalisation in Destructors
+
+Destructors - `impl Drop for Foo` - are commonly used in place of `finally` paradigms from other languages.

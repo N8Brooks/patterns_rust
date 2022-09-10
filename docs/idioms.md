@@ -21,3 +21,9 @@ Add a `impl Default for X` and a `fn new() -> X` always. Even if they are duplic
 ## Finalisation in Destructors
 
 Destructors - `impl Drop for Foo` - are commonly used in place of `finally` paradigms from other languages.
+
+## Keep owned values in changed enums
+
+- Use `mem::take()` to move some value to a replacement when modifying its owner.
+- If it doesn't implement the `Default` trait then you can use `mem::replace`.
+- If you are working with the `Option` enum there is `option.take()`.

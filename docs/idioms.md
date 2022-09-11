@@ -27,3 +27,23 @@ Destructors - `impl Drop for Foo` - are commonly used in place of `finally` para
 - Use `mem::take()` to move some value to a replacement when modifying its owner.
 - If it doesn't implement the `Default` trait then you can use `mem::replace`.
 - If you are working with the `Option` enum there is `option.take()`.
+
+## On-Stack Dynamic Dispatch
+
+- Lighter notes here because I don't plan on using this.\*
+
+Uses the `dyn` keyword in place of a `Box`. Monomorphisation is the process of compiling code for different types. Since rust has dynamic dispatch it can avoid this. This is good because it avoids the heap.
+
+## Foreign function interface (FFI)
+
+_Lighter notes here because I don't plan on using this._
+
+### Enums variants can have values
+
+```rs
+enum DatabaseError {
+  IsReadOnly = 1,
+  IOError = 2,
+  FileCorrupted = 3,
+}
+```

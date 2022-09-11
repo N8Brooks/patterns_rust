@@ -47,3 +47,7 @@ enum DatabaseError {
   FileCorrupted = 3,
 }
 ```
+
+## Iterating over an option
+
+`Option` implements `IntoIterator`. It's like a collection with optionally 1 element. It can be used for cool stuff like `.chain()` on an iterator and `.extend()` on a vector. It can be mis-used such as running a `for` loop over it instead of using `if let x = Some(option)`.

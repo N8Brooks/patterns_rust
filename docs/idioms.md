@@ -81,3 +81,7 @@ Then you can use private variants - variants that are not marked `pub`.
 ## Easy doc initialization
 
 Talks about fairly advanced ways to write examples for documentation comments.
+
+## Temporary mutability
+
+Can add a new block specifically for a mutable version or redefine a variable as immutable.

@@ -55,3 +55,13 @@ enum DatabaseError {
 ## Pass variables to closure
 
 Closures can capture variables, move variables with `move`, but usually you just need a few. Use a closure with rebinding.
+
+## Private fields
+
+### Adding a variant to an enum is a breaking change
+
+To avoid this, initialize your enum with `#[non_exhaustive]` so that you can add stuff without it being a breaking change going forward.
+
+### If you are doing so intra-crate
+
+Then you can use private variants - variants that are not marked `pub`.

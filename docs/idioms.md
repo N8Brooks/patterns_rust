@@ -12,11 +12,23 @@ This is briefly covered in the [Rust Book](https://doc.rust-lang.org/book/ch04-0
 
 ### The gist
 
+## Cancatenating Strings with format!
+
+`format!`
+
 It's better to use a reference to the static version because the borrowed heap types can be implicitly converted to the static versions.
 
 ## [Constructors](https://rust-unofficial.github.io/patterns/idioms/ctor.html)
 
 Add a `impl Default for X` and a `fn new() -> X` always. Even if they are duplicated or new is empty. People just expected `new` to be there. Default is useful for `*or_default` functions!
+
+## The Default Trait
+
+`impl Default for X`
+
+## Collections are Smart Pointers
+
+They can be implicitly dereferenced like in Preferring the **borrowed type**.
 
 ## Finalisation in Destructors
 
@@ -65,3 +77,7 @@ To avoid this, initialize your enum with `#[non_exhaustive]` so that you can add
 ### If you are doing so intra-crate
 
 Then you can use private variants - variants that are not marked `pub`.
+
+## Easy doc initialization
+
+Talks about fairly advanced ways to write examples for documentation comments.
